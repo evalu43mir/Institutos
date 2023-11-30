@@ -2,35 +2,30 @@ import { collection, addDoc } from "https://www.gstatic.com/firebasejs/10.6.0/fi
 import { db } from "./firebase.js";
 
 window.addEventListener('DOMContentLoaded', () => {
-    const formularioManualidad = document.querySelector('#Formulario-Manualidad');
+    const formularioInstitucion = document.querySelector('#Formulario-Institucion');
 
-    formularioManualidad.addEventListener('submit', async (e) => {
+    formularioInstitucion.addEventListener('submit', async (e) => {
         e.preventDefault();
 
-        const NOMBRE = formularioManualidad['Nombre-Manualidad'].value;
-        const TIPO = formularioManualidad['Tipo-Manualidad'].value;
-        const MATERIALES = formularioManualidad['Materiales-Manualidad'].value;
-        const DESCRIPCION = formularioManualidad['Descripcion-Manualidad'].value;
-        const FECHA_CREACION = formularioManualidad['FechaCreacion-Manualidad'].value;
+        const NOMBRE = formularioInstitucion['Nombre-Institucion'].value;
+        const UBICACION = formularioInstitucion['Ubicacion-Institucion'].value;
+        const DIRECTOR = formularioInstitucion['Director-Institucion'].value;
+        const FECHA_FUNDACION = formularioInstitucion['FechaFundacion-Institucion'].value;
+        const CLAVE = formularioInstitucion['Clave-Institucion'].value;
 
         try {
-            // Utiliza addDoc para agregar un documento con un identificador generado automáticamente
-            const nuevaManualidadRef = await addDoc(collection(db, 'Manualidades'), {
+            const nuevaInstitucionRef = await addDoc(collection(db, 'Instituciones'), {
                 Nombre: NOMBRE,
-                Tipo: TIPO,
-                Materiales: MATERIALES,
-                Descripcion: DESCRIPCION,
-                FechaCreacion: FECHA_CREACION
+                Ubicacion: UBICACION,
+                Director: DIRECTOR,
+                FechaFundacion: FECHA_FUNDACION,
+                ClaveInstituto: CLAVE
             });
 
-            // Muestra un mensaje si todo sale bien
-            alert(`La manualidad ${NOMBRE} ha sido registrada exitosamente`);
-
-            // Limpia el formulario
-            formularioManualidad.reset();
+            alert(`La institución ${NOMBRE} ha sido registrada exitosamente`);
+            formularioInstitucion.reset();
         } catch (error) {
-            // Maneja el error y muestra un mensaje con el error
-            alert('Error al registrar la manualidad:', 'noValido');
+            alert('Error al registrar la institución:', 'noValido');
         }
     });
 });

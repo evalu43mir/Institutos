@@ -10,7 +10,7 @@
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
     <link rel="stylesheet" href="style.css">
     <script type="module" src="./main.js"></script>
-    <title>Manualidades</title>
+    <title>Institutos Estado de México</title>
 </head>
 
 <body>
@@ -18,7 +18,7 @@
     <!-- Navbar con tema oscuro -->
     <nav class="navbar navbar-dark bg-dark fixed-top">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">Manualidades</a>
+            <a class="navbar-brand" href="#">Institutos Estado de México</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
                 aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -42,11 +42,11 @@
                         </li>
                         <li class="nav-item">
                             <a class="nav-link botonesConSesion" id="Mostrar-Manualidades"
-                                href="Subir Manualidades.html">REGISTRAR UNA MANUALIDAD</a>
+                                href="Subir Manualidades.html">REGISTRAR UN INSTITUTO</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link botonesConSesion" id="Mostrar-Manualidades" href="index.html">VER
-                                MANUALIDADES</a>
+                                INSTITUTOS</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link botonesConSesion" id="CerrarSesion">CERRAR SESIÓN</a>
@@ -59,57 +59,57 @@
 
     <!-- Contenido del cuerpo aquí -->
 
-    <!-- Lista de Manualidades -->
+    <!-- Lista de Instituciones -->
     <div class="container p-4 mt-5">
         <div class="row">
             <div class="col-md-6 offset-md-3 mt-5">
-                <ul class="list-group Manualidades"></ul>
+                <ul class="list-group Instituciones"></ul>
             </div>
         </div>
     </div>
 
     <!-- MODAL DE ACTUALIZACIÓN -->
-    <div class="modal fade" id="ActualizarManualidad" tabindex="-1" aria-labelledby="exampleModalLabel"
+    <div class="modal fade" id="ActualizarInstitucion" tabindex="-1" aria-labelledby="exampleModalLabel"
         aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content bg-dark text-light">
                 <div class="modal-header bg-dark">
-                    <h1 class="modal-title fs-5" id="exampleModalLabel">Actualizar Manualidad</h1>
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Actualizar Institución</h1>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <form id="Formulario-ActualizarManualidad">
+                    <form id="Formulario-ActualizarInstitucion">
                         <div class="mb-3">
-                            <label for="Actualizar-Nombre">Nombre de la Manualidad</label>
+                            <label for="Actualizar-Nombre" class="form-label">Nombre de la Institución</label>
                             <input type="text" id="Actualizar-Nombre" class="form-control mb-3"
                                 placeholder="Ingresa el nuevo nombre">
                         </div>
                         <div class="mb-3">
-                            <label for="Actualizar-Tipo">Tipo</label>
-                            <input type="text" id="Actualizar-Tipo" class="form-control mb-3"
-                                placeholder="Ingresa el nuevo tipo">
+                            <label for="Actualizar-Ubicacion" class="form-label">Ubicación</label>
+                            <input type="text" id="Actualizar-Ubicacion" class="form-control mb-3"
+                                placeholder="Ingresa la nueva ubicación">
                         </div>
                         <div class="mb-3">
-                            <label for="Actualizar-Materiales">Materiales</label>
-                            <input type="text" id="Actualizar-Materiales" class="form-control mb-3"
-                                placeholder="Ingresa los nuevos materiales">
+                            <label for="Actualizar-Director" class="form-label">Director</label>
+                            <input type="text" id="Actualizar-Director" class="form-control mb-3"
+                                placeholder="Ingresa el nuevo director">
                         </div>
                         <div class="mb-3">
-                            <label for="Actualizar-Descripcion">Descripción</label>
-                            <input type="text" id="Actualizar-Descripcion" class="form-control mb-3"
-                                placeholder="Ingresa la nueva descripción">
+                            <label for="Actualizar-FechaFundacion" class="form-label">Fecha de Fundación</label>
+                            <input type="date" id="Actualizar-FechaFundacion" class="form-control mb-3">
                         </div>
                         <div class="mb-3">
-                            <label for="Actualizar-FechaCreacion">Fecha de Creación</label>
-                            <input type="date" id="Actualizar-FechaCreacion" class="form-control mb-3">
+                            <label for="Actualizar-ClaveInstituto" class="form-label">Clave del Instituto</label>
+                            <input type="text" id="Actualizar-ClaveInstituto" class="form-control mb-3"
+                                placeholder="Ingresa la nueva clave del instituto">
                         </div>
-                        <button class="btn btn-primary w-100 mb-2 edit Boton-ActualizarManualidad">Actualizar</button>
+                        <button type="submit"
+                            class="btn btn-primary w-100 mb-2 edit Boton-ActualizarInstitucion">Actualizar</button>
                     </form>
                 </div>
             </div>
         </div>
     </div>
-
 
     <!-- MODAL DE INICIO DE SESION -->
     <div class="modal fade" id="InicioSesion" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
